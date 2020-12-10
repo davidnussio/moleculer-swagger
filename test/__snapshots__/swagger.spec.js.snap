@@ -1,0 +1,365 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Create a Swagger service without settings Create service-1 and service-2 with decorated actions Mixin should register an openapi action 1`] = `
+Object {
+  "components": Object {
+    "responses": Object {
+      "NotFound": Object {
+        "description": "The specified resource was not found",
+      },
+      "ServiceUnaviable": Object {
+        "description": "Service Unaviable",
+      },
+      "Success": Object {
+        "content": Object {
+          "application/json": Object {
+            "schema": Object {
+              "type": "string",
+            },
+          },
+          "text/html": Object {
+            "schema": Object {
+              "type": "string",
+            },
+          },
+        },
+        "description": "Successful operation",
+      },
+      "Unauthorized": Object {
+        "description": "Unauthorized",
+      },
+    },
+  },
+  "info": Object {
+    "contact": Object {
+      "email": "apiteam@swagger.io",
+    },
+    "description": "A short description of the API. CommonMark syntax MAY be used for rich text representation.",
+    "license": Object {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html",
+    },
+    "termsOfService": "http://swagger.io/terms/",
+    "title": "The title of the API.",
+    "version": "3.0.3",
+  },
+  "openapi": "3.0.3",
+  "paths": Object {
+    "/service-1/": Object {
+      "get": Object {
+        "operationId": "service-1.list",
+        "parameters": Array [],
+        "responses": Object {
+          "200": Object {
+            "$ref": "#/components/responses/Success",
+          },
+          "401": Object {
+            "$ref": "#/components/responses/Unauthorized",
+          },
+          "404": Object {
+            "$ref": "#/components/responses/NotFound",
+          },
+          "503": Object {
+            "$ref": "#/components/responses/ServiceUnaviable",
+          },
+        },
+        "summary": "/service-1/",
+        "tags": Array [
+          "service-1",
+        ],
+      },
+    },
+    "/service-2/": Object {
+      "get": Object {
+        "operationId": "service-2.list",
+        "parameters": Array [],
+        "responses": Object {
+          "200": Object {
+            "$ref": "#/components/responses/Success",
+          },
+          "401": Object {
+            "$ref": "#/components/responses/Unauthorized",
+          },
+          "404": Object {
+            "$ref": "#/components/responses/NotFound",
+          },
+          "503": Object {
+            "$ref": "#/components/responses/ServiceUnaviable",
+          },
+        },
+        "summary": "/service-2/",
+        "tags": Array [
+          "service-2",
+        ],
+      },
+    },
+    "/service-2/complex/{id}/case/{type}": Object {
+      "get": Object {
+        "operationId": "service-2.complex",
+        "parameters": Array [
+          Object {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": Object {
+              "type": "string",
+            },
+          },
+          Object {
+            "in": "path",
+            "name": "type",
+            "required": true,
+            "schema": Object {
+              "type": "number",
+            },
+          },
+          Object {
+            "in": "query",
+            "name": "filter",
+            "required": true,
+            "schema": Object {
+              "items": Object {
+                "type": "string",
+              },
+              "type": "array",
+            },
+          },
+        ],
+        "responses": Object {
+          "200": Object {
+            "$ref": "#/components/responses/Success",
+          },
+          "401": Object {
+            "$ref": "#/components/responses/Unauthorized",
+          },
+          "404": Object {
+            "$ref": "#/components/responses/NotFound",
+          },
+          "503": Object {
+            "$ref": "#/components/responses/ServiceUnaviable",
+          },
+        },
+        "summary": "/service-2/complex/{id}/case/{type}",
+        "tags": Array [
+          "service-2",
+        ],
+      },
+    },
+    "/service-2/{id}": Object {
+      "get": Object {
+        "operationId": "service-2.get",
+        "parameters": Array [
+          Object {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": Object {
+              "type": "string",
+            },
+          },
+        ],
+        "responses": Object {
+          "200": Object {
+            "$ref": "#/components/responses/Success",
+          },
+          "401": Object {
+            "$ref": "#/components/responses/Unauthorized",
+          },
+          "404": Object {
+            "$ref": "#/components/responses/NotFound",
+          },
+          "503": Object {
+            "$ref": "#/components/responses/ServiceUnaviable",
+          },
+        },
+        "summary": "/service-2/{id}",
+        "tags": Array [
+          "service-2",
+        ],
+      },
+    },
+  },
+}
+`;
+
+exports[`Create a Swagger service without settings Create service-1 and service-2 with decorated actions Mixin should register an openapi action 2`] = `
+Object {
+  "components": Object {
+    "responses": Object {
+      "NotFound": Object {
+        "description": "The specified resource was not found",
+      },
+      "ServiceUnaviable": Object {
+        "description": "Service Unaviable",
+      },
+      "Success": Object {
+        "content": Object {
+          "application/json": Object {
+            "schema": Object {
+              "type": "string",
+            },
+          },
+          "text/html": Object {
+            "schema": Object {
+              "type": "string",
+            },
+          },
+        },
+        "description": "Successful operation",
+      },
+      "Unauthorized": Object {
+        "description": "Unauthorized",
+      },
+    },
+  },
+  "info": Object {
+    "contact": Object {
+      "email": "apiteam@swagger.io",
+    },
+    "description": "A short description of the API. CommonMark syntax MAY be used for rich text representation.",
+    "license": Object {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html",
+    },
+    "termsOfService": "http://swagger.io/terms/",
+    "title": "The title of the API.",
+    "version": "3.0.3",
+  },
+  "openapi": "3.0.3",
+  "paths": Object {
+    "/service-1/": Object {
+      "get": Object {
+        "operationId": "service-1.list",
+        "parameters": Array [],
+        "responses": Object {
+          "200": Object {
+            "$ref": "#/components/responses/Success",
+          },
+          "401": Object {
+            "$ref": "#/components/responses/Unauthorized",
+          },
+          "404": Object {
+            "$ref": "#/components/responses/NotFound",
+          },
+          "503": Object {
+            "$ref": "#/components/responses/ServiceUnaviable",
+          },
+        },
+        "summary": "/service-1/",
+        "tags": Array [
+          "service-1",
+        ],
+      },
+    },
+    "/service-2/": Object {
+      "get": Object {
+        "operationId": "service-2.list",
+        "parameters": Array [],
+        "responses": Object {
+          "200": Object {
+            "$ref": "#/components/responses/Success",
+          },
+          "401": Object {
+            "$ref": "#/components/responses/Unauthorized",
+          },
+          "404": Object {
+            "$ref": "#/components/responses/NotFound",
+          },
+          "503": Object {
+            "$ref": "#/components/responses/ServiceUnaviable",
+          },
+        },
+        "summary": "/service-2/",
+        "tags": Array [
+          "service-2",
+        ],
+      },
+    },
+    "/service-2/complex/{id}/case/{type}": Object {
+      "get": Object {
+        "operationId": "service-2.complex",
+        "parameters": Array [
+          Object {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": Object {
+              "type": "string",
+            },
+          },
+          Object {
+            "in": "path",
+            "name": "type",
+            "required": true,
+            "schema": Object {
+              "type": "number",
+            },
+          },
+          Object {
+            "in": "query",
+            "name": "filter",
+            "required": true,
+            "schema": Object {
+              "items": Object {
+                "type": "string",
+              },
+              "type": "array",
+            },
+          },
+        ],
+        "responses": Object {
+          "200": Object {
+            "$ref": "#/components/responses/Success",
+          },
+          "401": Object {
+            "$ref": "#/components/responses/Unauthorized",
+          },
+          "404": Object {
+            "$ref": "#/components/responses/NotFound",
+          },
+          "503": Object {
+            "$ref": "#/components/responses/ServiceUnaviable",
+          },
+        },
+        "summary": "/service-2/complex/{id}/case/{type}",
+        "tags": Array [
+          "service-2",
+        ],
+      },
+    },
+    "/service-2/{id}": Object {
+      "get": Object {
+        "operationId": "service-2.get",
+        "parameters": Array [
+          Object {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": Object {
+              "type": "string",
+            },
+          },
+        ],
+        "responses": Object {
+          "200": Object {
+            "$ref": "#/components/responses/Success",
+          },
+          "401": Object {
+            "$ref": "#/components/responses/Unauthorized",
+          },
+          "404": Object {
+            "$ref": "#/components/responses/NotFound",
+          },
+          "503": Object {
+            "$ref": "#/components/responses/ServiceUnaviable",
+          },
+        },
+        "summary": "/service-2/{id}",
+        "tags": Array [
+          "service-2",
+        ],
+      },
+    },
+  },
+}
+`;

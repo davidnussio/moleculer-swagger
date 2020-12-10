@@ -1,0 +1,90 @@
+{
+  "name": "moleculer-swagger",
+  "version": "0.1.0-beta.0",
+  "description": "Moleculer swagger service",
+  "author": {
+    "name": "David Nussio",
+    "email": "david.nussio@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/davidnussio/moleculer-swagger.git"
+  },
+  "main": "./index.js",
+  "scripts": {
+    "test": "jest --watch",
+    "test:ci": "jest --coverage --no-cache",
+    "lint": "eslint --ext=.js src test",
+    "lint:fix": "eslint --fix --ext=.js src test",
+    "format": "prettier src/**/*.js test/**/*.js",
+    "coverall": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "run:example": "node ./example/server.js"
+  },
+  "keywords": [
+    "microservices",
+    "moleculer",
+    "swagger",
+    "openapi"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "moleculer": "^0.14"
+  },
+  "devDependencies": {
+    "@types/jest": "26.0.18",
+    "coveralls": "3.1.0",
+    "eslint": "7.2.0",
+    "eslint-config-airbnb": "18.2.1",
+    "eslint-config-prettier": "7.0.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-prettier": "3.2.0",
+    "husky": "4.3.5",
+    "jest": "26.6.3",
+    "lint-staged": "10.5.3",
+    "moleculer": "0.14.11",
+    "moleculer-web": "0.9.1",
+    "post-merge-install": "0.4.0",
+    "prettier": "2.2.1"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">= 8.x.x"
+  },
+  "jest": {
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node",
+    "rootDir": "./src",
+    "roots": [
+      "../test"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "tsd": {
+    "directory": "test/typescript/tsd"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": true
+  },
+  "lint-staged": {
+    "*.{json,css,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "post-merge": "post-merge-install",
+      "post-rebase": "post-merge-install"
+    }
+  }
+}
