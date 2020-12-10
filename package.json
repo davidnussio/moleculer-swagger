@@ -1,6 +1,6 @@
 {
   "name": "moleculer-swagger",
-  "version": "0.1.0-beta.0",
+  "version": "0.1.0-beta1",
   "description": "Moleculer swagger service",
   "author": {
     "name": "David Nussio",
