@@ -1,4 +1,9 @@
-![Moleculer logo](http://moleculer.services/images/banner.png)
+# DEPRECATED
+
+use [moleculer-auto-openapi](https://github.com/grinat/moleculer-auto-openapi)
+
+
+----------------------
 
 [![Build Status](https://travis-ci.org/davidnussio/moleculer-swagger.svg?branch=master)](https://travis-ci.org/davidnussio/moleculer-swagger)
 [![Coverage Status](https://coveralls.io/repos/github/davidnussio/moleculer-swagger/badge.svg?branch=master)](https://coveralls.io/github/davidnussio/moleculer-swagger?branch=master)
